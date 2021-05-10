@@ -70,9 +70,11 @@ The ISO/IEC/IEEE 29119 Software Testing is an internationally recognised standar
 
 ## Question 6 
 
-Information security does not just mean computer security. It also includes data, information, or telephone conversations.
+Information security does not just mean computer security. It also includes data, information, or telephone conversations. Also, all information system owners are responsible for considering security controls throughout their information systems, from initial planning to service retirement.
 
 - Authentication - Today's most popular and commonly known methods are user IDs and passwords. However, this method is easy to hack, and a better way is to check the verification number by email or text, and even by fingerprint or eye-scan. It can also make it safer by creating multiple authentication systems.
+
+Information systems that store or process data must leverage multi-factor authentication through managed authentication services. If this is not possible, the use of multi-factor authentication by third parties is permitted(Oneit.uncc.edu. 2021).
 
 
 ## Question 7
@@ -81,9 +83,31 @@ Let's look at some commonly used methods to ensure that data is safe and secure.
 
 - Risk Management - The more dangerous the data is, the more protection it provides, and the less protection it may have. It is also important to make a good decision on which data to protect more closely because improved data security increases costs.
 
-- Access Control - Access control allows users to access only the appropriate information resources once they are authenticated. Access control determines who have permission to read, modify, add, or delete information.
+- Backups - It is intended to prevent possible data loss due to user or technical malfunction. It is important that backups be updated regularly. These backups must be stored in a secure location and can also be encrypted.
 
 - Encryption - If information from external media, such as the Internet, CDs, or flash drives, data can be accessed by unauthorized users even with appropriate authentication and access control. To prevent this, encryption was created. Encryption is a processor that encodes data on transmission or storage so that only authorized users can access it. For proper use, an encoding method is agreed so that the sender and receiver can communicate appropriately, and both parties can share encryption keys to encode and decode each other's messages.
+
+- Pseudonymisation - It is a way to secure personal data. There is still useful data, but it does not include identifiable information. Because people cannot be identified directly from aliased data, the procedure is much simpler and the risk is greatly reduced in the case of data breaches or losses.
+
+- Access Control - Access control allows users to access only the appropriate information resources once they are authenticated. Access control determines who have permission to read, modify, add, or delete information.
+
+- Destruction - The time may come to discard the data you have. These data are under GDPR, you have an obligation to delete data that you do not need, and sensitive data guarantees a more comprehensive method of destruction(GDPR Informer. 2021).
+
+## Question 8
+
+Data users have rights and responsibilities to access and use integrated data.
+
+- Data users can consult with the data manager about any significant changes or updates to the data integration project.
+
+- It is eligible for adequate training in dealing with legislative frameworks and security requirements. Training materials are determined by integrating institutions through possible input, advice and support provided by data managers. Data users also have access to a variety of self-help tools to enhance their understanding of Commonwealth commitments.
+
+- Data users should know and understand the sanctions applied to attempts to distribute output or misuse data that may be distinct from attempts to identify individuals or organizations.
+
+- Data users can receive approval or rejection notifications from the Data Manager, and data guardians have the right to approve or reject all or part of the project proposal.
+
+- Data users are responsible for paying the data manager for recovery, if applicable, and the data user and data manager are responsible for ensuring that the data set is used for authorized purposes only(Toolkit.data.gov.au. 2021).
+
+
 
 
 ## Reference
@@ -111,3 +135,15 @@ Simpleprogrammer.com. 2021. [online] Available at: <https://simpleprogrammer.com
 Eriksson, U., 2021. Software Testing Process – Basics of Software Testing Life Cycle | ReQtest. [online] ReQtest. Available at: <https://reqtest.com/testing-blog/the-a-to-z-guide-to-the-software-testing-process/> [Accessed 23 June 2021].
 
 smartbear.com. n.d., 2021 Test plan vs Test design: What's the difference?. [online] Available at: <https://smartbear.com/test-management/test-design-vs-test-plan/> [Accessed 23 June 2021].
+
+### Q6
+
+Oneit.uncc.edu. 2021. Standard for Security Requirements of Information Systems | Office of OneIT | UNC Charlotte. [online] Available at: <https://oneit.uncc.edu/iso/standard-security-requirements-information-systems> [Accessed 30 June 2021].
+
+### Q7
+
+GDPR Informer. 2021. 6 Essential Data Protection Methods - GDPR Informer. [online] Available at: <https://gdprinformer.com/gdpr-articles/6-essential-data-protection-methods> [Accessed 30 June 2021].
+
+### Q8
+
+Toolkit.data.gov.au. 2021. Data Integration - Roles and responsibilities of data users - Data.gov.au. [online] Available at: <https://toolkit.data.gov.au/Data_Integration_-_Roles_and_responsibilities_of_data_users.html> [Accessed 30 May 2021].
