@@ -107,6 +107,19 @@ Data users have rights and responsibilities to access and use integrated data.
 
 - Data users are responsible for paying the data manager for recovery, if applicable, and the data user and data manager are responsible for ensuring that the data set is used for authorized purposes only(Toolkit.data.gov.au. 2021).
 
+## Question 9
+
+Relational databases are currently one of the most commonly used databases. It consists of a table, indicating the relationship between key and value. The table consists of rows and columns. Each column has its own name and its own type. These columns are also called field or attribute. A row means a bundle of related data. All rows in a table have the same number of columns, also called tuple or record.
+
+Relational databases are fast in classifying, sorting, and navigating data, are as reliable as they have been used for a long time, and guarantee the integrity of the data under any circumstances. Relationships between tables can be divided by the number of tables you relate to:
+
+- One-to-one relationships - It's easiest to visualize. In this relationship, there is only one record on each side of the relationship.
+
+- One-to-many relationships - There is one record on one side of the relationship, and zero, one, or many on the other.
+
+- Many-to-many relationships - This is the most flexible type of relationship. There are zero, one or many records on one side of the relationship and zero, one or many records on the other.
+
+Schema is a blueprint for designing a table. These schemas must represent items and types for each column of the table, as well as primary and foreign keys(Smartsheet. 2021).
 
 
 
@@ -147,3 +160,7 @@ GDPR Informer. 2021. 6 Essential Data Protection Methods - GDPR Informer. [onlin
 ### Q8
 
 Toolkit.data.gov.au. 2021. Data Integration - Roles and responsibilities of data users - Data.gov.au. [online] Available at: <https://toolkit.data.gov.au/Data_Integration_-_Roles_and_responsibilities_of_data_users.html> [Accessed 30 May 2021].
+
+### Q9
+
+Smartsheet. 2021. All about Relational Database Models | Smartsheet. [online] Available at: <https://www.smartsheet.com/relational-database-modeling> [Accessed 30 June 2021].
