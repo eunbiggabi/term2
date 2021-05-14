@@ -121,6 +121,31 @@ Relational databases are fast in classifying, sorting, and navigating data, are 
 
 Schema is a blueprint for designing a table. These schemas must represent items and types for each column of the table, as well as primary and foreign keys(Smartsheet. 2021).
 
+## Question 10
+
+Integrity of data refers to the maintenance of accuracy, consistency, and validity of data. Maintaining the integrity of the data is an important function of the database management system and maintains the integrity of the data, primarily by limiting the operations applied to the data. There are four types of integrity that the database refers to:
+
+- Entity integrity - Every table must have a column selected as the primary key. Fields selected as primary keys must have unique values, and do not allow empty values.
+
+- Referential integrity - The relationship between tables must be consistent so that the foreign key of one table matches the primary key of the table referencing that key. As a result, if the primary key changes, all foreign keys referenced must be changed to match.
+
+- Domain integrity - To ensure the integrity of the fields present in the table, defining the type of field, acceptance of NULL values, etc., and ensuring that the correct data is entered.
+
+- Integrity rule - In a database, integrity rules refer to all the constraints to protect the integrity of data. Business rules apply differently to each user using a database, but integrity rules are common rules across databases.
+
+A foreign key is the only key in one table that can identify records from another table. Foreign keys are used to refer to records from one table to records from another table. 
+
+Between tables in a reference relationship, problems related to the reference integrity described above can occur. Foreign keys avoid problems related to reference integrity through these constraints(Eng. 2021).
+
+## Question 11
+
+- Insert - Used to add one or more rows to a database table. You must specify a table to insert rows, a column to populate, and a value to insert.
+
+- Remove - Used to change column values for one or more database table rows. You need a table name to update, a SET clause to specify the columns to update, and a WHERE clause to specify the rows to include in the update task.
+
+- Update - used to remove one or more rows from the database table. A WHERE clause specifying the table name to update and the rows to include in the update operation is required.
+
+- Merge - Provides a means to perform INSERT, UPDATE, or Delete operations based on source data from another table in one statement. The advantage of using MERGE statements is that they can pass through data rather than pass for each task(Essentialsql.com. 2021).
 
 
 ## Reference
@@ -164,3 +189,11 @@ Toolkit.data.gov.au. 2021. Data Integration - Roles and responsibilities of data
 ### Q9
 
 Smartsheet. 2021. All about Relational Database Models | Smartsheet. [online] Available at: <https://www.smartsheet.com/relational-database-modeling> [Accessed 30 June 2021].
+
+### Q10 
+
+Eng, A., 2021. Chapter 9 Integrity Rules and Constraints. [online] Opentextbc.ca. Available at: <https://opentextbc.ca/dbdesign01/chapter/chapter-9-integrity-rules-and-constraints/> [Accessed 26 June 2021].
+
+### Q11
+
+Essentialsql.com. 2021. Learn how to add, remove, or modify values in SQL table. [online] Available at: <https://www.essentialsql.com/introduction-sql-server-data-modification-statements/> [Accessed 14 May 2021].
