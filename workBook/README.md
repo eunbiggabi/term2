@@ -1,17 +1,17 @@
 ## Question 1
 
-Ruby on rails uses the MVC(Model-View-Controller) architectural pattern to allow easier maintainability throughout the application.
+Ruby on Rails allows easier maintenance across the entire application. Looking at the overall flow of the MVC and requesting access to a specific URL that the user wants, controller receives these request and imports data from the model to visualize it to the user via View.
 
-Looking at the overall flow of MVC, when a user accesses and requests a particular URL, the Controller receives this request, retrieves the data from the Model, and visualizes it to the user via View.
+**Model** represents information and data of the application. It is a component that processes and is responsible for such data information, such as a database, initialization value, variable, etc. The model must keep the all of data that the users want to edit, and must not know any information about the view or controller. This means that when a data change occurs, the model should not have an internal property value that references the view so that the screen UI can be adjusted directly. In addition, when a change occurs, the treatment of the change notice must be implemented and reused.
 
-The **Controllers** interact with models and views. This presence of a controller provides a significant advantage in maintenance by avoiding situations where the Model and View are directly connected to each other. Query and import data from the model that meets the request and reflect it in the View. The **Model** handles everything related to the data. It's a function because it doesn't care what it looks like to the user. You can define the rules and functions associated with the database, create, find, and import data. The **Views** typically refer to elements necessary for front-end configurations such as html/css/javascript (almost identical to browsers viewed by actual users) which is the end result of showing the user. Views can server content in several formats, such as HTML, PDF, XML, RSS and more.
+**View** is that indicates user interface elements, such as input text, checkbox entries, etc. In other words, it is responsible for inputting data, objects, and displaying output, and usually consists of a front end that is viewed by users such as HTML, CSS, and JS. This refers to a screen that users can view based on data. Views should not store the information the model has separately. It can just say that the view has the role of displaying the data on the screen when data receive it.
 
-Supports the major databases - It supports MySQL, Oracle, MS SQL Server, PostgreSQL, IBM DB2, and more(Adrian Mejia Blog. 2021).
-
+**Controller** interact with models and views. The presence of a controller prevents models and views from being directly connected to each other. In other words, it acts as a bridge between data and user interface elements. The simple rules of the controller must be known about the model or view, the model or view does not exist, and the controller is responsible for the main logic to interpret and send to each department when notified of the change(Adrian Mejia Blog. 2021).
 
 ## Question 2
 
-The database we are going to looking for is SQlite. It is widely used and it is the default database when a Ruby on Rails application is created.
+SQLite is a built-in database for Ruby on Rail. So I will identify a SQLite database.
+
 
 Pros
 
@@ -33,9 +33,7 @@ Cons
 
 ## Question 3
 
-If you proceed without any plan when you proceed with a development project, it is easy to fail and not complete it within the deadline. This is especially true when working on a team project. It takes a lot of time to gather ideas and it is not easy to find a compromise between various opinions. Even if we gather opinions, there will be many disruptions in the process of the project. As such, the initial plan takes too much time and money, and the development process is prolonged, resulting in problems that result in no results or incorrect results. One of the methodologies used to solve these problems is Agile project(Planio. 2021).
-
-The Agile project process is a conceptual methodology for development, characterized by repetitive development by dividing the duration of the development project into short periods. It was popular among software developers first, and now we use a lot of Agile in other fields. You can guess what purpose Agile was made for by looking at the Agile Declaration below.
+Agile is a software development method for developing and continuing to provide real-world operational software through rapid repetitive operations. However, Agile is not exactly a set of regulations that inform the work needed to develop software. Rather, it is a view of collaboration and workflow, and a value system that guides us through choices about what and how we make it. Specifically, the key to agile software development methodology is to quickly deliver small components of working software to improve customer satisfaction. These methods focus on continuous development utilizing adaptive approaches and teamwork. In general, agile software development consists of small teams organized by software developers and business people themselves, favoring a lightweight approach and actively embracing change at all stages of the lifecycle. You can see what Agile's purpose is in the declaration below.
 
 
 - Divide the entire project development period into several short periods.
@@ -44,42 +42,47 @@ The Agile project process is a conceptual methodology for development, character
 
 - During the development period, we only act to achieve our goals. I don't make anything else by falling sideways.
 
-- Have a daily pre-work meeting. During this time, share your development situation and what to do today. You can talk about the difficulties you feel while developing. If you share the situation every day, you can easily see how far you've come to achieve your goals. Some team members finish their work early and others don't. In that case, you can adjust the workload for each person. 
+- Have a daily pre-work meeting. During this time, share your development situation and what to do today. You can talk about the difficulties you feel while developing. If you share the situation every day, you can easily see how far you've come to achieve your goals. Some team members finish their work early and others don't. In that case, you can adjust the workload for each person(COSMO CONSULT. 2021).
 
-If you apply Agile in this way, you can easily check the progress of the project every day and know the completion of the project, so you don't have to count the nights at the end(COSMO CONSULT. 2021).
+In summary, first, personal interactions should be prioritized over processes and tools. Second, work software takes precedence over comprehensive documents. Third, collaboration with customers takes precedence over contract negotiations. Finally, responding to changes takes precedence over the next plan.
 
 ## Question 4
 
-Source control/version control is the activity of tracking and managing code changes. The system provides an operational record of code development and helps resolve conflicts that arise when merging contribution codes from multiple sources.
 
-Whether you're writing your own simple applications or working as a team on a large software development project, source control is an essential component of the development process. The source code management system allows you to track code changes, check the history of modifications to code, and revert to earlier versions of your project when necessary. The source code management system can collaborate with teams to write code, isolate their work until ready, and identify who made the changes and what changes were made to resolve the problem quickly. Source code management systems simplify the development process and provide centralized sources for all code(Simpleprogrammer.com. 2021).
+It stores changes to the code, allowing the history of changes and the operator to track them, and making them easier to change to past codes. Source control is an essential factor, whether it is simple work or cooperation as a large project team. That way, you can isolate your work, track who made the changes and what changes were applied, and resolve problems quickly. Version control systems are on the market, but the most recommended are Git and Mercury(Simpleprogrammer.com. 2021). 
+
+In summary, as described above, source code is easy to back up and recover to the previous source in the event of a bug. It is also convenient to merge sources when different projects are being carried out simultaneously from the same source, and it is possible to determine who changed the elements from what trial to what second.
+
 
 ## Question 5
 
-The competitive edge of software is in quality and the best way to ensure quality is to invest in testing. Generally, strict application of tests may seem to cost more to development schedules or costs, but in practice, they help identify and prevent defects that occur in advance, and contribute greatly to cost savings.
+ISO/IEC/IEEE 29119 software testing is an internationally recognized standard for testing software available to all companies within the development lifecycle(Eriksson, 2021).
 
-The ISO/IEC/IEEE 29119 Software Testing is an internationally recognised standard to test software which can be used within the development life cycle by any company (Eriksson, 2021).
+For test processing, the following basic steps are followed.
 
-1. Test Plan -  A detailed document summarizing test strategies, objectives, timelines, expectations, and resources required for output, serving as a blueprint for performing processors that monitor and control.
+1. Test strategy/Test planning- This involves producing a document which describes the test objectives and overall approach.
 
-2. Test Analysis/Design - Key points are the test conditions, how to access the test, and the number of times it is tested. Also, test design as a process combines years of experience by test managers with similar projects, tester knowledge of systems/features under test, and general practice of testing at a certain point in time.
+2. Test Analysis/Test Design - This involves the design of the tests by identifying the conditions that will be necessary.
 
-3. Test Execution - Verify that it works as expected in the order of test cases created in the implementation phase. If it's an unexpected result, you have to make evidence such as capture and manage it as an issue. It should also analyze the cause of the issue and identify other functions affected by the scope of the correction.
+3. Implementation/Execution - The execution of the test involves the running of the specified test on the computer system by using an automated test tool or manually.
 
-4. Test exit criteria/Closure - If you meet the test end criteria defined in the test plan/analysis step, share the test end with team. There will be many termination criteria, but if the progress of the set test case reaches 100%, or if it is possible to respond later after agreement with officials even if there is a specific issue, the test can usually be terminated. Afterwards, if the test is needed not only in the test environment but also in the actual environment, the test termination is shared and the test is returned to the test execution stage and checked according to the set scenario (smartbear.com, 2021).
+4. Evaluating Exit Criteria and Reporting- This process involves evaluating the data when the test is done. This helps assess if more testing is needed or gives information so a summary report for stakeholders can be written.
+
+5. Test Closure Activities- This happens when software is delivered. However, it can be used in other circumstances such as a project been cancelled or a maintenance release or update is done. This last step is done to check which planned deliverables were achieved to ensure all incident reports are resolved(smartbear.com, 2021).
+
 
 ## Question 6 
 
-Information security does not just mean computer security. It also includes data, information, or telephone conversations. Also, all information system owners are responsible for considering security controls throughout their information systems, from initial planning to service retirement.
+- User authentication requirements - is the verification of an active human-to-machine transfer of credentials required for confirmation of a user’s authenticity. User authentication is performed in almost all human-to-computer interactions other than guest and automatically logged in accounts. Authentication authorizes human-to-machine interactions on both wired and wireless networks to enable access to networked and Internet connected systems and resources. The reliability of authentication is affected not only by the number of factors involved but also the specific technologies and the manner in which they are implemented. Well-designed and appropriately enforced implementation rules can help ensure the security of user authentication.
 
-- Authentication - Today's most popular and commonly known methods are user IDs and passwords. However, this method is easy to hack, and a better way is to check the verification number by email or text, and even by fingerprint or eye-scan. It can also make it safer by creating multiple authentication systems.
+- Access provisioning - involves coordinating creation of user accounts, password management, email authorizations, and other tasks. A user may be granted the ability to view, create, or modify files based on specific security and role parameters. When done correctly, provisioning encompasses the entire lifecycle, including changing roles and retiring user accounts across all systems.
 
-Information systems that store or process data must leverage multi-factor authentication through managed authentication services. If this is not possible, the use of multi-factor authentication by third parties is permitted(Oneit.uncc.edu. 2021).
+- Authorization processes - is the process of establishing if the user (who is already authenticated), is permitted to have access to a resource. It determines what a user is and is not allowed to do. is a security mechanism used to determine user/client privileges or access levels related to system resources, including computer programs, files, services, data and application features. Authorization is normally preceded by authentication for user identity verification(Oneit.uncc.edu. 2021).
 
 
 ## Question 7
 
-Let's look at some commonly used methods to ensure that data is safe and secure.
+Let's look how to protect information and data in general and how to apply it to projects
 
 - Risk Management - The more dangerous the data is, the more protection it provides, and the less protection it may have. It is also important to make a good decision on which data to protect more closely because improved data security increases costs.
 
@@ -95,7 +98,7 @@ Let's look at some commonly used methods to ensure that data is safe and secure.
 
 ## Question 8
 
-Data users have rights and responsibilities to access and use integrated data.
+Let us examine the legal obligations associated with user data processing and how the project is carried out.
 
 - Data users can consult with the data manager about any significant changes or updates to the data integration project.
 
@@ -147,26 +150,57 @@ Between tables in a reference relationship, problems related to the reference in
 
 - Merge - Provides a means to perform INSERT, UPDATE, or Delete operations based on source data from another table in one statement. The advantage of using MERGE statements is that they can pass through data rather than pass for each task(Essentialsql.com. 2021).
 
+## Question 12
+
+a - Instagram
+
+- React Native -iOS & Android apps
+- Python (Django framework) & HTML5JavaScript -server-side
+- Computing services -Amazon S3, Amazon, EBS, Amazon EC2
+- Database -PostgreSQL (Medium. 2021).
+
+b - Instagram was aquired by Facebook for scalability. There are many data centers built by facebook which was released to the public as part of the Open Compute Project. There are now many data centres to handle the massive amounts of the data.
+
+c - Some examples of technoology interaction within the application include
+
+- React/React Native- Instagram uses React to develop their front end which interacts witht their users.
+- Python Django- Which is the framework it is built upon
+- PostgreSQL- is the database which helps store all the data models.
+
+d - For instagram consider a graph where the nodes are people/users and there are multiple kinds of verticies which are.
+
+- v1: The people N followers (undirected) 
+- v2: The people who's profile was visited(directed, weight by visitor number) 
+- v3: The people who interact with posts by sharing 
+- v4: The people who liked/commented/shared on N's activity(directed, weighted by a formula based on the number of actions of different kinds) 
+- v5: The people mentioned in a post/comment of N(directed)
+
+N is a node. Based on the attributes of this graph and the "populatrity" of the person is calculated through a formula for marketing purposes.
+
+e - Instagram has many entites which need to be tracked such as likes, users, posts, comments, tags and followers. This is to help calculate the algorithm as said above to determine a person popularity.
+
+f - Firstly the user can have many followers, posts, likes and comments. A posts and likes belongs to as user. A post can have many tags and tags belongs to a post as well as comments. Comments can have many tags and tags can belong to a comment. Comments also belong to posts and a post can have many comments.
+
 
 ## Reference
 
 ### Q1
 
-Adrian Mejia Blog. 2021. Ruby on Rails Architectural Design. [online] Available at: <https://adrianmejia.com/ruby-on-rails-architectural-design/> [Accessed 30 June 2021].
+Adrian Mejia Blog. 2021. Ruby on Rails Architectural Design. [online] Available at: <https://adrianmejia.com/ruby-on-rails-architectural-design/> [Accessed 19 June 2021].
 
 ### Q2
 
-www.javatpoint.com. 2021. SQLite Advantages and Disadvantages - javatpoint. [online] Available at: <https://www.javatpoint.com/sqlite-advantages-and-disadvantages> [Accessed 29 June 2021].
+www.javatpoint.com. 2021. SQLite Advantages and Disadvantages - javatpoint. [online] Available at: <https://www.javatpoint.com/sqlite-advantages-and-disadvantages> [Accessed 19 June 2021].
 
 ### Q3
 
-COSMO CONSULT. 2021. Agile Methodology for a successful software implementation. [online] Available at: <https://www.cosmoconsult.com/business-and-it-consulting/implementation-methodologies-and-implementation-consulting/agile-implementation-methodology/> [Accessed 8 May 2021].
+COSMO CONSULT. 2021. Agile Methodology for a successful software implementation. [online] Available at: <https://www.cosmoconsult.com/business-and-it-consulting/implementation-methodologies-and-implementation-consulting/agile-implementation-methodology/> [Accessed 19 June 2021].
 
-Planio. 2021. The Ultimate Guide to Implementing Agile Project Management (and Scrum) | Planio. [online] Available at: <https://plan.io/blog/what-is-agile-project-management/> [Accessed 8 May 2021].
+Planio. 2021. The Ultimate Guide to Implementing Agile Project Management (and Scrum) | Planio. [online] Available at: <https://plan.io/blog/what-is-agile-project-management/> [Accessed 04 June 2021].
 
 ### Q4
 
-Simpleprogrammer.com. 2021. [online] Available at: <https://simpleprogrammer.com/software-developers-know-source-control/> [Accessed 8 May 2021].
+Simpleprogrammer.com. 2021. [online] Available at: <https://simpleprogrammer.com/software-developers-know-source-control/> [Accessed 20 June 2021].
 
 ### Q5
 
@@ -176,15 +210,15 @@ smartbear.com. n.d., 2021 Test plan vs Test design: What's the difference?. [onl
 
 ### Q6
 
-Oneit.uncc.edu. 2021. Standard for Security Requirements of Information Systems | Office of OneIT | UNC Charlotte. [online] Available at: <https://oneit.uncc.edu/iso/standard-security-requirements-information-systems> [Accessed 30 June 2021].
+Oneit.uncc.edu. 2021. Standard for Security Requirements of Information Systems | Office of OneIT | UNC Charlotte. [online] Available at: <https://oneit.uncc.edu/iso/standard-security-requirements-information-systems> [Accessed 24 June 2021].
 
 ### Q7
 
-GDPR Informer. 2021. 6 Essential Data Protection Methods - GDPR Informer. [online] Available at: <https://gdprinformer.com/gdpr-articles/6-essential-data-protection-methods> [Accessed 30 June 2021].
+GDPR Informer. 2021. 6 Essential Data Protection Methods - GDPR Informer. [online] Available at: <https://gdprinformer.com/gdpr-articles/6-essential-data-protection-methods> [Accessed 24 June 2021].
 
 ### Q8
 
-Toolkit.data.gov.au. 2021. Data Integration - Roles and responsibilities of data users - Data.gov.au. [online] Available at: <https://toolkit.data.gov.au/Data_Integration_-_Roles_and_responsibilities_of_data_users.html> [Accessed 30 May 2021].
+Toolkit.data.gov.au. 2021. Data Integration - Roles and responsibilities of data users - Data.gov.au. [online] Available at: <https://toolkit.data.gov.au/Data_Integration_-_Roles_and_responsibilities_of_data_users.html> [Accessed 28 June 2021].
 
 ### Q9
 
@@ -196,7 +230,8 @@ Eng, A., 2021. Chapter 9 Integrity Rules and Constraints. [online] Opentextbc.ca
 
 ### Q11
 
-Essentialsql.com. 2021. Learn how to add, remove, or modify values in SQL table. [online] Available at: <https://www.essentialsql.com/introduction-sql-server-data-modification-statements/> [Accessed 14 May 2021].
+Essentialsql.com. 2021. Learn how to add, remove, or modify values in SQL table. [online] Available at: <https://www.essentialsql.com/introduction-sql-server-data-modification-statements/> [Accessed 30 June 2021].
 
+### Q12
 
-why i cant push to git hub... try again
+Medium. 2021. Technology stack behind Instagram. [online] Available at: <https://medium.com/@selen2802/technology-stack-behind-instagram-215a8c044664>[Accessed 2 July 2021].
