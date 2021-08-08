@@ -39,13 +39,17 @@ Body helper was created to help people suffer from minor pain. We are selling va
 
 ![Main](https://i.imgur.com/mIw8wBK.png)
 
+- Collection
+
+![Collection](https://i.imgur.com/zjTWfME.png)
+
 - SignUp
 
 ![SignUp](https://i.imgur.com/5n4LEAJ.png)
 
-- Collection
+- New Product
 
-![Collection](https://i.imgur.com/zjTWfME.png)
+![Product](https://i.imgur.com/bD203iJ.png)
 
 
 5. Target audience
@@ -54,11 +58,13 @@ This marketplace app mainly targets those who suffer from joint muscles when exe
 
 6. Tech stack (e.g. html, css, deployment platform, etc)
 
-- ruby on rails - Ruby on Rails, or Rails, is a server-side web application framework written in Ruby under the MIT License. Rails is a model–view–controller framework, providing default structures for a database, a web service, and web pages
+- Ruby on rails - Ruby on Rails, or Rails, is a server-side web application framework written in Ruby under the MIT License. Rails is a model–view–controller framework, providing default structures for a database, a web service, and web pages
 
 - PostgreSQL - PostgreSQL is a free and open-source relational database management system emphasizing extensibility and technical standards compliance built on the SQL language. It is designed to handle a range of workloads, from single machines to data warehouses or Web services with many concurrent users.
 
 - HTML - HTML is a software solution stack that defines the properties and behaviors of web page content by implementing a markup based pattern to it. HTML5 is the fifth and current major version of HTML, and subsumes XHTML. HTML was used for our web front end.
+
+- SCSS - scss are CSS frameworks that allow developers to quickly build web interfaces with ease. The bulk of the website styling was done with SCSS due to time constraints and unfamiliarity
 
 
 
@@ -67,19 +73,24 @@ This marketplace app mainly targets those who suffer from joint muscles when exe
 - Users can SignUp and SignIn
 - Users can view all product
 - Users can create Profile
-Only when the user is signed in
-Users can create an event
-Only when they are signed in
-Users can also edit their own events
-Users can create an account
-Users can change upload a profile photo
-Users can edit their details
-Users can upload a photo to their event
-Users can log in and out
-Users can see which events they are attending
-They can also see which events they own
-Users can search for events
+
 ### R13. Wireframes for your app
+
+- Main & About
+
+![Main & About](https://i.imgur.com/zAjEV8u.png)
+
+- Sale Promotion & Collection
+
+![Sale Promotion & Collection](https://i.imgur.com/dtFcuC6.png)
+
+- Form of New Product
+
+![Form of New Product](https://i.imgur.com/xsbvyAs.png)
+
+- Form of User Sign In
+
+![Form of User Sign In](https://i.imgur.com/AsYr0ye.png)
 
 ### R14. An ERD for your app
 
@@ -98,7 +109,11 @@ Users can search for events
 - AWS S3 - offering over 200 fully featured services from data centers globally. Millions of customers—including the fastest-growing startups, largest enterprises, and leading government agencies—are using AWS to lower costs, become more agile, and innovate faster.
 R17	Describe your projects models in terms of the relationships (active record associations) they have with each other
 R18	Discuss the database relations to be implemented in your application
+
+
 ### R19. Provide your database schema design
+
+This is same as my ERD what I have on **R14**
 
 ![EunJEON_T2A2-Marketplace schema design](https://i.imgur.com/oZkhXrZ.png)
 R20	Describe the way tasks are allocated and tracked in your project
