@@ -71,8 +71,9 @@ This marketplace app mainly targets those who suffer from joint muscles when exe
 ### R12. User stories for your app
 
 - Users can SignUp and SignIn
-- Users can view all product
 - Users can create Profile
+- Users can view all product
+
 
 ### R13. Wireframes for your app
 
@@ -109,6 +110,12 @@ This marketplace app mainly targets those who suffer from joint muscles when exe
 - AWS S3 - offering over 200 fully featured services from data centers globally. Millions of customers—including the fastest-growing startups, largest enterprises, and leading government agencies—are using AWS to lower costs, become more agile, and innovate faster.
 R17	Describe your projects models in terms of the relationships (active record associations) they have with each other
 R18	Discuss the database relations to be implemented in your application
+
+### R17. Describe your projects models in terms of the relationships (active record associations) they have with each other
+
+I currently am using 4 models: Application_record, Order, Product, and User. The User model has the highest functionality through the Devise where-by Users can have multiple roles & have a standard role given once created. The Order model finds itself operating almost like a join table as it sits between Product and User. Through the Product model I have begun creating validation on the images and an auto re-size for any image created. For now, it ensures that Product belong to someone and can have images attached when create a new product. Also, The User model divied by admin and normal user so that normal user can not create a new product. The Application Record model is used for the rails active record. Active Record automatically creates methods to allow an application to read and manipulate data stored within its tables.
+
+### R18. Discuss the database relations to be implemented in your application
 
 
 ### R19. Provide your database schema design
