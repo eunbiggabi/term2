@@ -4,7 +4,7 @@ People think they take painkillers, see a doctor for treatment, or operate when 
 
 ### R8. Why is it a problem that needs solving?
 
-We want to help over 10,000 people **back to healthy life** and future through providing our effective and functional products. 
+Body helper was created to help people suffer from minor pain. We want to help over 10,000 people **back to healthy life** and future through providing our effective and functional products. 
 
 ### R9. A link (URL) to your deployed app (i.e. website)
 
@@ -22,7 +22,7 @@ Body Helper is inspired by Shopify, which is widely used in Marketplace recently
 
 2. Functionality / features
 
-Body helper was created to help people suffer from minor pain. We are selling various products such as wrists, knees, waist, and shoulders at a discount. Description describes how it is used for each product, and an image is also attached.
+ We are selling various products such as wrists, knees, waist, and shoulders at a discount. Description describes how it is used for each product, and an image is also attached.
 
 - User Accounts - Body helpers allow users to create accounts with security passwords and edit profiles.
 
@@ -55,6 +55,12 @@ Body helper was created to help people suffer from minor pain. We are selling va
 5. Target audience
 
 This marketplace app mainly targets those who suffer from joint muscles when exercising, those who experience difficulties in their daily lives due to old age, those who suffer from repeated work, and those who want to correct their posture because of poor posture. Furthermore, those who want to relieve the fatigue of the day are also eligible.
+
+- Someone who does repetitive work
+- Someone who exercise hard
+- Someone who have minor pain
+- Someone who need support their joint and muscles
+- Someone who want to relieve daily fatigue
 
 6. Tech stack (e.g. html, css, deployment platform, etc)
 
@@ -117,6 +123,8 @@ I currently am using 4 models: Application_record, Order, Product, and User. The
 
 ### R18. Discuss the database relations to be implemented in your application
 
+The structure of the database is very basic based on the automatic migrations through Devise, Active Storage, and My Products Migration which allows name, description, price, and references the Users tying them all in together.
+
 
 ### R19. Provide your database schema design
 
@@ -124,6 +132,8 @@ This is same as my ERD what I have on **R14**
 
 ![EunJEON_T2A2-Marketplace schema design](https://i.imgur.com/oZkhXrZ.png)
 R20	Describe the way tasks are allocated and tracked in your project
+
+### R20. Describe the way tasks are allocated and tracked in your project
 
 
 
