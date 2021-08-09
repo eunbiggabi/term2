@@ -8,6 +8,7 @@ Body helper was created to help people suffer from minor pain. We want to help o
 
 ### R9. A link (URL) to your deployed app (i.e. website)
 
+[Heroku Link](https://young-taiga-87851.herokuapp.com/) (Issue with database, only desplay is working)
 
 ### R10. A link to your GitHub repository (repo).
 
@@ -70,16 +71,15 @@ This marketplace app mainly targets those who suffer from joint muscles when exe
 
 - HTML - HTML is a software solution stack that defines the properties and behaviors of web page content by implementing a markup based pattern to it. HTML5 is the fifth and current major version of HTML, and subsumes XHTML. HTML was used for our web front end.
 
-- SCSS - scss are CSS frameworks that allow developers to quickly build web interfaces with ease. The bulk of the website styling was done with SCSS due to time constraints and unfamiliarity
+- SCSS, Bootstrap & FontAwesome - Bootstrap, the world’s most popular framework for building responsive, mobile-first sites. Bootstrap was used for all styling and interactive components on the site. Bootstrap was used for its ease of use, aesthetic appeal, numerous components, JS integrations and responsive first properties. Bootstrap speeds up front end development immensely. Font Awesome is a web font containing all the icons from the Twitter Bootstrap framework, and now many more. It allows you to easily use many icons across your site that are stored remotely.
 
 
 
 ### R12. User stories for your app
 
-- Users can SignUp and SignIn
-- Users can create Profile
-- Users can view all product
+![Trello](https://i.imgur.com/2lKvSbD.png)
 
+[Trello Link](https://trello.com/b/Gm2ykgRf/eunjeont2a2-marketplace)
 
 ### R13. Wireframes for your app
 
@@ -107,19 +107,44 @@ This marketplace app mainly targets those who suffer from joint muscles when exe
 ### R15. Explain the different high-level components (abstractions) in your app
 
 
+1. Model
+
+ - User
+ - User_address(Profile)
+ - Product
+ - Order
+
+ These 4 model represents my marketplace app. It is a component that processes and is responsible for such data information, such as a database, initialization value, variable, etc. So these 4 model must not know any information about the view or controller. This means that when a data change occurs, the model should not have an internal property value that references the view so that the screen UI can be adjusted directly. In addition, when a change occurs, the treatment of the change notice must be implemented and reused.
+
+2. View 
+
+- Home / Index (Main page)
+- User / Index (LogIn & SignUp page)
+- Product / Index (View All Collection page)
+
+These 3 views are that indicates user interface elements, such as input text, checkbox entries, etc. In other words, it is responsible for inputting data, objects, and displaying output, and usually consists of a front end that is viewed by users such as HTML, SCSS, and JS. This refers to a screen that users can view based on data. Views should not store the information the model has separately. It can just say that the view has the role of displaying the data on the screen when data receive it.
+
+3. Controller 
+
+- Home 
+- Product
+- User
+
+interact with models and views. The presence of a controller prevents models and views from being directly connected to each other. In other words, it acts as a bridge between data and user interface elements. The simple rules of the controller must be known about the model or view, the model or view does not exist, and the controller is responsible for the main logic to interpret and send to each department when notified of the change
+
 ### R16. Detail any third party services that your app will use  
 
 - Heroku - Heroku is a container-based cloud Platform as a Service (PaaS). Developers use Heroku to deploy, manage, and scale modern apps. This Appliction makes use of Heroku's free service model for small projects. Heorku also streamlines deployment through its Git integration allowing updates to easily be pushed to Heroku as you would any other remote git repository.
-
-- Github - Last but not least it Github, a developers best friend. GitHub is a website and cloud-based service that helps developers store and manage their code, as well as track and control changes to their code.
 
 - AWS S3 - offering over 200 fully featured services from data centers globally. Millions of customers—including the fastest-growing startups, largest enterprises, and leading government agencies—are using AWS to lower costs, become more agile, and innovate faster.
 R17	Describe your projects models in terms of the relationships (active record associations) they have with each other
 R18	Discuss the database relations to be implemented in your application
 
+- Github - Last but not least it Github, a developers best friend. GitHub is a website and cloud-based service that helps developers store and manage their code, as well as track and control changes to their code.
+
 ### R17. Describe your projects models in terms of the relationships (active record associations) they have with each other
 
-I currently am using 4 models: Application_record, Order, Product, and User. The User model has the highest functionality through the Devise where-by Users can have multiple roles & have a standard role given once created. The Order model finds itself operating almost like a join table as it sits between Product and User. Through the Product model I have begun creating validation on the images and an auto re-size for any image created. For now, it ensures that Product belong to someone and can have images attached when create a new product. Also, The User model divied by admin and normal user so that normal user can not create a new product. The Application Record model is used for the rails active record. Active Record automatically creates methods to allow an application to read and manipulate data stored within its tables.
+I currently am using 4 models: Application_record, Order, Product, and User. The User model has the highest functionality through the Devise where-by Users can have multiple roles & have a standard role given once created. The Order model finds itself operating almost like a join table as it sits between Product and User. Product model I  created validation. Also, The User model divied by admin and normal user so that normal user can not create a new product. The Application Record model is used for the rails active record. Active Record automatically creates methods to allow an application to read and manipulate data stored within its tables.
 
 ### R18. Discuss the database relations to be implemented in your application
 
@@ -128,10 +153,117 @@ The structure of the database is very basic based on the automatic migrations th
 
 ### R19. Provide your database schema design
 
-This is same as my ERD what I have on **R14**
+```
+ActiveRecord::Schema.define(version: 2021_08_06_074705) do
 
-![EunJEON_T2A2-Marketplace schema design](https://i.imgur.com/oZkhXrZ.png)
-R20	Describe the way tasks are allocated and tracked in your project
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "active_storage_attachments", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "record_type", null: false
+    t.bigint "record_id", null: false
+    t.bigint "blob_id", null: false
+    t.datetime "created_at", null: false
+    t.index ["blob_id"], name: "index_active_storage_attachments_on_blob_id"
+    t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
+  end
+
+  create_table "active_storage_blobs", force: :cascade do |t|
+    t.string "key", null: false
+    t.string "filename", null: false
+    t.string "content_type"
+    t.text "metadata"
+    t.string "service_name", null: false
+    t.bigint "byte_size", null: false
+    t.string "checksum", null: false
+    t.datetime "created_at", null: false
+    t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+  end
+
+  create_table "active_storage_variant_records", force: :cascade do |t|
+    t.bigint "blob_id", null: false
+    t.string "variation_digest", null: false
+    t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "inventories", force: :cascade do |t|
+    t.integer "quantity"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.float "total_price"
+    t.bigint "user_id", null: false
+    t.bigint "product_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["product_id"], name: "index_orders_on_product_id"
+    t.index ["user_id"], name: "index_orders_on_user_id"
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.float "discount_price"
+    t.float "original_price"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "inventory_id", null: false
+    t.bigint "category_id", null: false
+    t.bigint "user_id", null: false
+    t.index ["category_id"], name: "index_products_on_category_id"
+    t.index ["inventory_id"], name: "index_products_on_inventory_id"
+    t.index ["user_id"], name: "index_products_on_user_id"
+  end
+
+  create_table "user_addresses", force: :cascade do |t|
+    t.string "firstname"
+    t.string "lastname"
+    t.string "address_line"
+    t.string "city"
+    t.string "postcode"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_user_addresses_on_user_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.boolean "admin", default: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "orders", "products"
+  add_foreign_key "orders", "users"
+  add_foreign_key "products", "categories"
+  add_foreign_key "products", "inventories"
+  add_foreign_key "products", "users"
+  add_foreign_key "user_addresses", "users"
+end
+
+```
+
+This is history how I add and remove migrations
+
+![Migration](https://i.imgur.com/9NSqi6v.png)
 
 ### R20. Describe the way tasks are allocated and tracked in your project
 
