@@ -1,14 +1,21 @@
 ### R7. Identification of the problem you are trying to solve by building this particular marketplace app.
 
-People think they take painkillers, see a doctor for treatment, or operate when they feel pain in their knees, back, wrists, etc. in their daily lives, but they do not know that a 20-dollar protector can reduce minor pain or inflammation. Furthermore, we want to be an app site that can relieve fatigue in a day by adding massage machines.
+People think they take painkillers, see a doctor for treatment, or even operate when they feel pain in their knees, back, wrists, etc. in their daily lives, but they do not know that a 20-dollar support products can reduce minor pain or inflammation. Furthermore, we want to be an app site that can relieve fatigue in a day by adding massage machines.
 
 ### R8. Why is it a problem that needs solving?
 
-Body helper was created to help people suffer from minor pain. We want to help over 10,000 people **back to healthy life** and future through providing our effective and functional products. 
+Healthy joints are essential for maintaining mobility in your body. Joints enable us to freely move our fingers, toes, arms, legs, back, and other body parts. Maintaining healthy joints is an important way to remain physically active.
+
+One way you can be active in managing your arthritis is by adapting your daily routine to relieve pressure on your joints. The following techniques can help you avoid stiffness and lighten the burden on your joints.
+
+- Keep moving -  Avoid holding one position for too long. When working at a desk, for example, get up and stretch every 15 minutes. Do the same while sitting at home reading or watching television.
+
+- Minimize the stress on your joints - Avoid positions or movements that put extra stress on joints. For example, opening a tight lid can be difficult if you have hand arthritis. One solution is to set the jar on a cloth, lean on the jar with your palm, and turn the lid using a shoulder motion. Better yet, purchase a wall-mounted jar opener that grips the lid, leaving both hands free to turn the jar.
+
 
 ### R9. A link (URL) to your deployed app (i.e. website)
 
-[Heroku Link](https://young-taiga-87851.herokuapp.com/) (Issue with database, only desplay is working)
+[Heroku Link](https://young-taiga-87851.herokuapp.com/) (There was a problem moving the database, only desplay is working at the moment)
 
 ### R10. A link to your GitHub repository (repo).
 
@@ -18,12 +25,16 @@ Body helper was created to help people suffer from minor pain. We want to help o
 
 1. Purpose
 
-Body Helper is inspired by Shopify, which is widely used in Marketplace recently. Marketplace offers only one product on a website, or several multi-items like Amazon eBay, and I want to focus on marketing capabilities in small groups to reduce the minor pain that comes from poor joints or repetitive work.
+To get healthy body, we not only need to strengthen the muscles that move and support the joint but we also need to maintain normal range of motion of your joints.
+
+Body helper was created to help people suffer from minor pain. We want to help over 10,000 people **back to healthy life** and future through providing our effective and functional products. 
+
+Also, Body Helper is inspired by my personal experience. I used to work as a process worker and I had a issue with my knee problem due to keep repititing same kind of work.
 
 
 2. Functionality / features
 
- We are selling various products such as wrists, knees, waist, and shoulders at a discount. Description describes how it is used for each product, and an image is also attached.
+Marketplace offers only one product on a website, or several multi-items like Amazon eBay, and I want to focus on marketing capabilities in small groups to reduce the minor pain that comes from poor joints or repetitive work. We are selling various products such as wrists, knees, waist, and shoulders at a discount. Description describes how it is used for each product, and an image is also attached.
 
 - User Accounts - Body helpers allow users to create accounts with security passwords and edit profiles.
 
@@ -43,6 +54,10 @@ Body Helper is inspired by Shopify, which is widely used in Marketplace recently
 - Collection
 
 ![Collection](https://i.imgur.com/zjTWfME.png)
+
+- Product Show
+
+![Product Show](https://i.imgur.com/EXmjjnF.png)
 
 - SignUp
 
@@ -91,9 +106,13 @@ This marketplace app mainly targets those who suffer from joint muscles when exe
 
 ![Sale Promotion & Collection](https://i.imgur.com/dtFcuC6.png)
 
+- Product Show
+
+![Product SHow](https://i.imgur.com/6UxEmCh.png)
+
 - Form of New Product
 
-![Form of New Product](https://i.imgur.com/xsbvyAs.png)
+![Form of New Product](https://i.imgur.com/6UxEmCh.png)
 
 - Form of User Sign In
 
@@ -144,7 +163,7 @@ R18	Discuss the database relations to be implemented in your application
 
 ### R17. Describe your projects models in terms of the relationships (active record associations) they have with each other
 
-I currently am using 4 models: Application_record, Order, Product, and User. The User model has the highest functionality through the Devise where-by Users can have multiple roles & have a standard role given once created. The Order model finds itself operating almost like a join table as it sits between Product and User. Product model I  created validation. Also, The User model divied by admin and normal user so that normal user can not create a new product. The Application Record model is used for the rails active record. Active Record automatically creates methods to allow an application to read and manipulate data stored within its tables.
+I currently am using 4 models: Application_record, Order, Product, and User. The User model has the highest functionality through the Devise where-by Users can have multiple roles & have a standard role given once created. The Order model finds itself operating almost like a join table as it sits between Product and User with validation. Also, The User model divied by admin and normal user so that normal user can not create a new product. The Application Record model is used for the rails active record. Active Record automatically creates methods to allow an application to read and manipulate data stored within its tables.
 
 ### R18. Discuss the database relations to be implemented in your application
 
@@ -266,6 +285,8 @@ This is history how I add and remove migrations
 ![Migration](https://i.imgur.com/9NSqi6v.png)
 
 ### R20. Describe the way tasks are allocated and tracked in your project
+
+I used all the work through git hub. 
 
 
 
